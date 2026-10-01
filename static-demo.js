@@ -9,13 +9,109 @@
   let sequence = 100;
   const nextId = (prefix) => `${prefix}${++sequence}`;
   const products = [
-    { id: 1, slug: 'inspiration-starter', name: '灵感启动包', subtitle: '把脑海里的好点子，变成下一件作品。', description: '一份为日常创作准备的数字补给。本页面仅展示数字商品店的下单与交付流程。\n这是虚构演示商品，付款按钮不会扣款，不包含真实订阅或第三方服务。', category: '创作灵感', priceCents: 2900, stock: 28, features: ['创意启发', '即刻交付', '演示商品'], badge: '编辑推荐', active: true, demo: true },
-    { id: 2, slug: 'workflow-essentials', name: '效率工具箱', subtitle: '少一点重复，多一点专注。', description: '从日常清单到工作节奏，找到适合自己的效率方式。此商品仅用于静态页面交互演示，没有实际工具或订阅权益。', category: '效率工具', priceCents: 4900, stock: 16, features: ['轻量工作流', '清晰结构', '演示商品'], badge: '人气好物', active: true, demo: true },
-    { id: 3, slug: 'code-companion', name: '开发者补给', subtitle: '为每一次构建，留一些探索的余地。', description: '面向开发与探索的数字好物概念演示。不提供真实 API 密钥、软件许可或账号服务，不索取第三方凭证。', category: '开发探索', priceCents: 6900, stock: 12, features: ['开发灵感', '探索实践', '演示商品'], badge: '灵感上新', active: true, demo: true },
-    { id: 4, slug: 'design-collection', name: '设计灵感集', subtitle: '让好看的想法，也有好用的表达。', description: '以设计资源为主题的虚构商品，用于预览详情、订单、兑换与后台管理界面。不会交付真实设计素材。', category: '创作灵感', priceCents: 3900, stock: 22, features: ['设计参考', '视觉探索', '演示商品'], badge: '', active: true, demo: true },
-    { id: 5, slug: 'learning-pass', name: '知识漫游卡', subtitle: '对世界保持好奇，给成长一点时间。', description: '学习内容主题的演示商品。价格、库存与订单均为本地虚构数据，刷新页面后回到初始状态。', category: '学习成长', priceCents: 1900, stock: 35, features: ['碎片学习', '持续成长', '演示商品'], badge: '轻松入门', active: true, demo: true },
-    { id: 6, slug: 'digital-weekend', name: '数字漫游包', subtitle: '留一点空白，发现屏幕另一边的精彩。', description: '数字体验组合主题演示，不涉及任何真实会员、充值或服务商。可尝试模拟支付，并使用演示兑换码生成回执。', category: '数字体验', priceCents: 5900, stock: 8, features: ['自由探索', '数字体验', '演示商品'], badge: '', active: true, demo: true }
-  ];
+  {
+    "id": 1,
+    "slug": "codex-demo",
+    "name": "Codex 服务体验",
+    "subtitle": "体验编程服务的下单与兑换流程",
+    "category": "AI 编程",
+    "priceCents": 9900,
+    "stock": 28,
+    "features": [
+      "服务兑换码",
+      "模拟交付"
+    ],
+    "badge": "编程服务",
+    "description": "编程服务兑换流程演示。可查看商品、模拟下单并领取演示兑换码。\n不包含 OpenAI 官方订阅、API 额度或账户充值。",
+    "active": true,
+    "demo": true
+  },
+  {
+    "id": 2,
+    "slug": "claude-demo",
+    "name": "Claude 服务体验",
+    "subtitle": "体验写作服务的下单与兑换流程",
+    "category": "AI 创作",
+    "priceCents": 12900,
+    "stock": 16,
+    "features": [
+      "服务兑换码",
+      "模拟交付"
+    ],
+    "badge": "写作服务",
+    "description": "写作服务兑换流程演示。可模拟下单、查看订单并提交兑换。\n不是 Anthropic 官方充值卡，不包含真实订阅或账户权益。",
+    "active": true,
+    "demo": true
+  },
+  {
+    "id": 3,
+    "slug": "starter-demo",
+    "name": "新手体验券",
+    "subtitle": "首次使用，先体验完整购买流程",
+    "category": "入门体验",
+    "priceCents": 1900,
+    "stock": 35,
+    "features": [
+      "完整流程",
+      "无需账号密码"
+    ],
+    "badge": "首次体验",
+    "description": "用于熟悉下单、领取兑换码和查询状态的演示商品。\n付款按钮不会扣款，兑换仅生成演示回执。",
+    "active": true,
+    "demo": true
+  },
+  {
+    "id": 4,
+    "slug": "writing-demo",
+    "name": "文案写作服务",
+    "subtitle": "文章、邮件与产品文案服务演示",
+    "category": "AI 创作",
+    "priceCents": 3900,
+    "stock": 22,
+    "features": [
+      "文案服务",
+      "模拟交付"
+    ],
+    "badge": "",
+    "description": "文案服务的商品详情与交付界面演示。\n这是虚构测试商品，不会交付真实文章、邮件或文案。",
+    "active": true,
+    "demo": true
+  },
+  {
+    "id": 5,
+    "slug": "debugging-demo",
+    "name": "代码调试服务",
+    "subtitle": "代码检查与问题定位服务演示",
+    "category": "AI 编程",
+    "priceCents": 6900,
+    "stock": 12,
+    "features": [
+      "调试服务",
+      "模拟交付"
+    ],
+    "badge": "",
+    "description": "代码调试服务的购买和兑换流程演示。\n不提供真实代码审查、软件许可或 API 密钥。",
+    "active": true,
+    "demo": true
+  },
+  {
+    "id": 6,
+    "slug": "workflow-demo",
+    "name": "工作流配置服务",
+    "subtitle": "自动化配置与使用指导服务演示",
+    "category": "效率工具",
+    "priceCents": 5900,
+    "stock": 8,
+    "features": [
+      "配置服务",
+      "模拟交付"
+    ],
+    "badge": "",
+    "description": "工作流配置服务的界面演示。\n不连接第三方账户，不执行真实自动化配置。所有数据刷新后重置。",
+    "active": true,
+    "demo": true
+  }
+];
   const orders = [];
   const deliveries = new Map();
   const redemptions = [];
@@ -113,7 +209,7 @@
     const order = { id: nextId('SPDEMO'), lookupToken: nextId('DEMO_QUERY_'), productId: product.id, productName: product.name, quantity: 1, totalCents: product.priceCents, status: 'pending', currency: 'CNY', createdAt: now(), expiresAt: new Date(Date.now() + 30 * 60000).toISOString(), paymentMode: 'demo', email: 'preview@example.invalid' };
     orders.push(order); if (paid) fulfill(order);
   }
-  redemptions.push({ id: nextId('RDDEMO'), productName: '设计灵感集（虚构履约示例）', orderId: orders[0].id, code: 'DEMO-FABRICATED-FULFILLMENT-EXAMPLE', status: 'pending_fulfillment', note: '这是用于预览履约管理界面的虚构申请，不需要进行真实服务。', createdAt: now(), fulfilledAt: null, fulfillmentNote: null });
+  redemptions.push({ id: nextId('RDDEMO'), productName: '文案写作服务（虚构履约示例）', orderId: orders[0].id, code: 'DEMO-FABRICATED-FULFILLMENT-EXAMPLE', status: 'pending_fulfillment', note: '这是用于预览履约管理界面的虚构申请，不需要进行真实服务。', createdAt: now(), fulfilledAt: null, fulfillmentNote: null });
   window.fetch = async (resource, options = {}) => {
     const url = typeof resource === 'string' ? resource : resource instanceof URL ? resource.href : resource?.url || '';
     const method = String(options.method || (typeof resource === 'object' && resource.method) || 'GET').toUpperCase();

@@ -9,3 +9,7 @@
 - 完整服务端源码、部署配置与数据库不在此公开演示仓库中
 
 可浏览商品、体验演示下单与兑换，或从页脚进入免密码的演示管理台。
+
+## 免费字体
+
+自托管 Storefront Sans SC 是 Noto Sans SC 的精简字体，遵循 SIL Open Font License 1.1。许可证与来源详见 fonts/OFL.txt 和 fonts/subset-manifest.json。
